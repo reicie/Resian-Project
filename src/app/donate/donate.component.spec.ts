@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WhyEducationComponent } from './why-education.component';
+import { DonateComponent } from './donate.component';
 
-describe('WhyEducationComponent', () => {
-  let component: WhyEducationComponent;
-  let fixture: ComponentFixture<WhyEducationComponent>;
+describe('DonateComponent', () => {
+  let component: DonateComponent;
+  let fixture: ComponentFixture<DonateComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WhyEducationComponent ]
+      declarations: [ DonateComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WhyEducationComponent);
+    fixture = TestBed.createComponent(DonateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

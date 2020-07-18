@@ -1,13 +1,11 @@
- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+ <nav class="navbar navbar-dark navbar-expand-sm bg-dark">
     <!-- brand, when clicked should navigate to home page -->
-    <a class="navbar-brand" routerLink="/home">Logo</a>
+    <a class="navbar-brand" routerLink="/home">
+      <img src="../assets/images/logo.png" alt="" style="height: 50px; width: 50px;">
+      <span style="font-size: small; font-family: cursive;">Emarti Educational Center</span>
+    </a>
     <!-- Links to each page of the application -->
     <ul class="navbar-nav">
-      <!-- why education page -->
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/why-education">Why Education</a>
-      </li>
-  
       <!-- our work -->
       <li class="nav-item">
         <a class="nav-link" routerLink="/our-work">Our Work</a>
@@ -22,13 +20,108 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" routerLink="/get-involved">Get Involved</a>
         <div class="dropdown-menu">
-          <a href="#" class="dropdown-item">Donate</a>
+          <a href="/donate" class="dropdown-item">Donate</a>
           <a href="#" class="dropdown-item">Sponsor a project</a>
           <a href="#" class="dropdown-item">Brand Partnership</a>
         </div>
       </li>
-  
+    </ul>
+    <ul class="navbar-nav nav-right">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/donate">Donate</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login">Log In</a>
+      </li>
     </ul>
 </nav>
 <router-outlet></router-outlet>
+<!-- page footer -->
+<footer class="page-footer font-small">
+  <div class="container text-center text-md-left">
+      <div class="row">
+          <div class="col-md-3 mx-auto">
+              <h5 class="font-weight-bold text-lowercase mt-3 mb-4">get to know us</h5>
+              <ul class="list-unstyled">
+                  <li>
+                      <a href="/about-us">about us</a>
+                  </li>
+                  <li>
+                      <a href="#">see our financials</a>
+                  </li>
+                  <li>
+                      <a href="/team">meet the team</a>
+                  </li>
+                  <li>
+                      <a href="#">careers</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- column 2 -->
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-3 mx-auto">
+              <h5 class="font-weight-bold text-lowercase mt-3 mb-4">connect</h5>
+              <ul class="list-unstyled">
+                  <li>
+                      <a href="#">contact us</a>
+                  </li>
+                  <li>
+                      <a href="#">help center</a>
+                  </li>
+                  <li>
+                      <a href="#">shop our store</a>
+                  </li>
+              </ul>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-3 mx-auto">
+              <h5 class="font-weight-bold text-lowercase mt-3 mb-4">get involved</h5>
+              <ul class="list-unstyled">
+                  <li>
+                      <a href="#">fundraise</a>
+                  </li>
+                  <li>
+                      <a href="#">brand partnerships</a>
+                  </li>
+                  <li>
+                      <a href="#">volunteer</a>
+                  </li>
+                  <li>
+                      <a href="#">students & teachers</a>
+                  </li>
+              </ul>
+          </div> 
+
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-3 mx-auto">
+              <h5 class="font-weight-bolder text-lowercase mt-3 mb-4">donate</h5>
+              <ul class="list-unstyled">
+                  <li>
+                      <a href="#">give to a campaign</a>
+                  </li>
+                  <li>
+                      <a href="#">give in someone's honor</a>
+                  </li>
+                  <li>
+                      <a href="#">sponsor a classroom</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <hr>
+  </div>
+  <div class="container">
+      <div class="row">
+          <mat-icon svgIcon="twitter"></mat-icon>
+          <mat-icon svgIcon="facebook"></mat-icon>
+          <mat-icon svgIcon="instagram"></mat-icon>
+          <mat-icon svgIcon="snapchat"></mat-icon>
+          <mat-icon svgIcon="youtube"></mat-icon>
+          <mat-icon svgIcon="linkedin"></mat-icon>
+      </div>
+      <div class="row" style="margin-top: 20px;">
+      </div>
+  </div>
+</footer>
+
 

@@ -1,0 +1,42 @@
+<mat-button-toggle-group [(value)]="selectedValue" #group="matButtonToggleGroup" multiple=true>
+    <mat-button-toggle class="active" *ngFor="let option of toggleOptions" (change)="selectionChanged($event.value)" [value]="option">{{option}}</mat-button-toggle>
+</mat-button-toggle-group>
+<!-- switch display to what it should be for someone donating once-->
+<div class="card" *ngIf="isGiveOnce">
+    <div class="card-header">Choose an amount to give</div>
+    <div class="card-body">
+        <div class="row">
+            <button class="amounts-buttons">$20 USD/mo</button>
+            <button class="amounts-buttons">$40 USD/mo</button>
+            <button class="amounts-buttons">$60 USD/mo</button>
+        </div>
+        <div class="row">
+            <button class="amounts-buttons">$80 USD/mo</button>
+            <button class="amounts-buttons">$100 USD/mo</button>
+            <button class="amounts-buttons">Other Amount</button>
+        </div>
+        <button class=" btn btn-primary donate-button">Donate</button>
+    </div>
+</div>
+<!-- switch displays to what it should be for monthly donation -->
+<div class="card" *ngIf="!isGiveOnce">
+    <div class="card-header">Choose an amount to give per month</div>
+    <div class="card-body">
+        <div class="row">
+            <button class="amounts-buttons">$20 USD/mo</button>
+            <button class="amounts-buttons">$40 USD/mo</button>
+            <button class="amounts-buttons">$60 USD/mo</button>
+        </div>
+        <div class="row">
+            <button class="amounts-buttons">$80 USD/mo</button>
+            <button class="amounts-buttons">$100 USD/mo</button>
+            <button class="amounts-buttons">Other Amount</button>
+        </div>
+        <button class=" btn btn-primary donate-button">Donate Monthly</button>
+        <hr>
+        <div class="row">
+            <p>Your (amount) monthly donation can give (children) children quality education and improve academic 
+                performance by 75% in 1 school year!</p>
+        </div>
+    </div>
+</div>
